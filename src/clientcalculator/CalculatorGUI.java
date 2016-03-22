@@ -1,6 +1,7 @@
 package clientcalculator;
 
 import java.awt.Toolkit;
+import java.awt.event.ItemEvent;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -22,6 +23,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jColorChooser1 = new javax.swing.JColorChooser();
+        jDialog1 = new javax.swing.JDialog();
         dugme1 = new javax.swing.JButton();
         dugme7 = new javax.swing.JButton();
         dugme8 = new javax.swing.JButton();
@@ -37,11 +39,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         dugmeMnozenje = new javax.swing.JButton();
         dugmePodeljeno = new javax.swing.JButton();
         CDugme = new javax.swing.JButton();
-        dugmeZnak = new javax.swing.JButton();
         rezultat = new javax.swing.JTextField();
         backspace = new javax.swing.JButton();
         jednako = new javax.swing.JButton();
         dugme0 = new javax.swing.JButton();
+        dugmeZnak = new javax.swing.JToggleButton();
 
         jButton10.setText("jButton1");
 
@@ -62,107 +64,119 @@ public class CalculatorGUI extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
         setLocation(new java.awt.Point(200, 120));
-        setMaximumSize(new java.awt.Dimension(280, 280));
-        setMinimumSize(new java.awt.Dimension(280, 280));
+        setMaximumSize(new java.awt.Dimension(350, 410));
+        setMinimumSize(new java.awt.Dimension(350, 410));
+        setPreferredSize(new java.awt.Dimension(350, 410));
         setResizable(false);
 
-        dugme1.setText("1");
+        dugme1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/1.png"))); // NOI18N
         dugme1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme1ActionPerformed(evt);
             }
         });
 
-        dugme7.setText("7");
+        dugme7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/7.png"))); // NOI18N
         dugme7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme7ActionPerformed(evt);
             }
         });
 
-        dugme8.setText("8");
+        dugme8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/8.png"))); // NOI18N
         dugme8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme8ActionPerformed(evt);
             }
         });
 
-        dugme5.setText("5");
+        dugme5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/5.png"))); // NOI18N
         dugme5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme5ActionPerformed(evt);
             }
         });
 
-        dugme9.setText("9");
+        dugme9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/9.png"))); // NOI18N
         dugme9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme9ActionPerformed(evt);
             }
         });
 
-        dugme6.setText("6");
+        dugme6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/6.png"))); // NOI18N
         dugme6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme6ActionPerformed(evt);
             }
         });
 
-        dugme3.setText("3");
+        dugme3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/3.png"))); // NOI18N
         dugme3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme3ActionPerformed(evt);
             }
         });
 
-        dugme4.setText("4");
+        dugme4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/4.png"))); // NOI18N
         dugme4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme4ActionPerformed(evt);
             }
         });
 
-        dugme2.setText("2");
+        dugme2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/2.png"))); // NOI18N
         dugme2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme2ActionPerformed(evt);
             }
         });
 
-        dugmeTacka.setText(".");
+        dugmeTacka.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/point.png"))); // NOI18N
         dugmeTacka.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeTackaActionPerformed(evt);
             }
         });
 
-        dugmeSabiranje.setText("+");
+        dugmeSabiranje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/plus.png"))); // NOI18N
         dugmeSabiranje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeSabiranjeActionPerformed(evt);
             }
         });
 
-        dugmeOduzimanje.setText("-");
+        dugmeOduzimanje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/minus.png"))); // NOI18N
         dugmeOduzimanje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeOduzimanjeActionPerformed(evt);
             }
         });
 
-        dugmeMnozenje.setText("x");
+        dugmeMnozenje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/multiple.png"))); // NOI18N
         dugmeMnozenje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeMnozenjeActionPerformed(evt);
             }
         });
 
-        dugmePodeljeno.setText("÷");
+        dugmePodeljeno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/divide.png"))); // NOI18N
         dugmePodeljeno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmePodeljenoActionPerformed(evt);
@@ -170,42 +184,24 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         CDugme.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        CDugme.setText("C");
+        CDugme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/c.png"))); // NOI18N
         CDugme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CDugmeActionPerformed(evt);
             }
         });
 
-        dugmeZnak.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        dugmeZnak.setText("±");
-        dugmeZnak.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dugmeZnakActionPerformed(evt);
-            }
-        });
-        dugmeZnak.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                dugmeZnakKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                dugmeZnakKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                dugmeZnakKeyTyped(evt);
-            }
-        });
-
         rezultat.setEditable(false);
         rezultat.setBackground(new java.awt.Color(244, 244, 244));
-        rezultat.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        rezultat.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        rezultat.setSelectionColor(new java.awt.Color(255, 0, 0));
         rezultat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rezultatActionPerformed(evt);
             }
         });
 
-        backspace.setText("Backspace");
+        backspace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/backspace.png"))); // NOI18N
         backspace.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backspaceActionPerformed(evt);
@@ -214,7 +210,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         jednako.setBackground(new java.awt.Color(130, 130, 130));
         jednako.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jednako.setText("=");
+        jednako.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/equal.png"))); // NOI18N
         jednako.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jednako.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,10 +218,22 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
-        dugme0.setText("0");
+        dugme0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/0.png"))); // NOI18N
         dugme0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme0ActionPerformed(evt);
+            }
+        });
+
+        dugmeZnak.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/+-.png"))); // NOI18N
+        dugmeZnak.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                dugmeZnakItemStateChanged(evt);
+            }
+        });
+        dugmeZnak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dugmeZnakActionPerformed(evt);
             }
         });
 
@@ -233,93 +241,101 @@ public class CalculatorGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(rezultat)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(dugme1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dugme2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dugme3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dugme7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dugme4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(dugme5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(dugme6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(dugme8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(dugme9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(dugmeZnak, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dugme0, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(dugmeTacka, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dugmePodeljeno, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dugmeMnozenje, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dugmeOduzimanje, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dugmeSabiranje, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(17, 17, 17))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jednako, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(rezultat, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dugme1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dugme7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dugme4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CDugme, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dugmeZnak, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(CDugme, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(backspace)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(dugme5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(dugme6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dugme2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dugme0, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dugme3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dugmeTacka, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(dugme8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(backspace, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dugme9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(dugmeSabiranje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dugmeOduzimanje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(dugmePodeljeno, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dugmeMnozenje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jednako, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)))
+                .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(rezultat, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(rezultat, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(CDugme, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backspace, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugmeSabiranje, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(backspace, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dugme7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugme8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugme9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugmeOduzimanje, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dugme5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugme6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugme4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugmeMnozenje, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dugme1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugme2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugme3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugmePodeljeno, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dugmeTacka, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dugmeZnak, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jednako, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(dugme0, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(dugme7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(dugme4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(dugme1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dugme8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dugme9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(dugme6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(dugme3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(dugme5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(11, 11, 11)
+                                        .addComponent(dugme2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(dugmeSabiranje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dugmeOduzimanje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(dugmePodeljeno, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dugmeMnozenje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dugme0, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dugmeTacka, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jednako, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dugmeZnak, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -332,11 +348,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void dugme4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dugme4ActionPerformed
         rezultat.setText(rezultat.getText() + "4");
     }//GEN-LAST:event_dugme4ActionPerformed
-
-    private void dugmeZnakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dugmeZnakActionPerformed
-        rezultat.setText( "-" + rezultat.getText());
-        
-    }//GEN-LAST:event_dugmeZnakActionPerformed
 
     private void CDugmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CDugmeActionPerformed
         rezultat.setText("");
@@ -419,23 +430,22 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jednakoActionPerformed
 
-    private void dugmeZnakKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dugmeZnakKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_0) {
-            rezultat.setText(rezultat.getText() + "0");
-        }
-    }//GEN-LAST:event_dugmeZnakKeyPressed
-
-    private void dugmeZnakKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dugmeZnakKeyTyped
-
-    }//GEN-LAST:event_dugmeZnakKeyTyped
-
-    private void dugmeZnakKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dugmeZnakKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dugmeZnakKeyReleased
-
     private void dugme0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dugme0ActionPerformed
                 rezultat.setText(rezultat.getText() + "0");
     }//GEN-LAST:event_dugme0ActionPerformed
+
+    private void dugmeZnakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dugmeZnakActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dugmeZnakActionPerformed
+
+    private void dugmeZnakItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_dugmeZnakItemStateChanged
+        if(evt.getStateChange() == ItemEvent.SELECTED){
+            rezultat.setText("-" + rezultat.getText());
+        }
+        else{
+            rezultat.setText((rezultat.getText()).substring(1));
+        }
+    }//GEN-LAST:event_dugmeZnakItemStateChanged
 /**/
     public void ukljuciDugmice() {
         dugmeOduzimanje.setEnabled(true);
@@ -489,12 +499,13 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton dugmePodeljeno;
     private javax.swing.JButton dugmeSabiranje;
     private javax.swing.JButton dugmeTacka;
-    private javax.swing.JButton dugmeZnak;
+    private javax.swing.JToggleButton dugmeZnak;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jednako;
     private javax.swing.JTextField rezultat;
