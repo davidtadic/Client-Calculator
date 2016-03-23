@@ -78,6 +78,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setFocusable(false);
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
         setLocation(new java.awt.Point(200, 120));
         setMaximumSize(new java.awt.Dimension(350, 410));
@@ -86,6 +87,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         setResizable(false);
 
         dugme1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/1.png"))); // NOI18N
+        dugme1.setFocusable(false);
         dugme1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme1ActionPerformed(evt);
@@ -93,6 +95,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/7.png"))); // NOI18N
+        dugme7.setFocusable(false);
         dugme7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme7ActionPerformed(evt);
@@ -100,6 +103,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/8.png"))); // NOI18N
+        dugme8.setFocusable(false);
         dugme8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme8ActionPerformed(evt);
@@ -107,6 +111,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/5.png"))); // NOI18N
+        dugme5.setFocusable(false);
         dugme5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme5ActionPerformed(evt);
@@ -114,6 +119,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/9.png"))); // NOI18N
+        dugme9.setFocusable(false);
         dugme9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme9ActionPerformed(evt);
@@ -121,6 +127,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/6.png"))); // NOI18N
+        dugme6.setFocusable(false);
         dugme6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme6ActionPerformed(evt);
@@ -128,6 +135,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/3.png"))); // NOI18N
+        dugme3.setFocusable(false);
         dugme3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme3ActionPerformed(evt);
@@ -135,6 +143,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/4.png"))); // NOI18N
+        dugme4.setFocusable(false);
         dugme4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme4ActionPerformed(evt);
@@ -142,6 +151,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/2.png"))); // NOI18N
+        dugme2.setFocusable(false);
         dugme2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme2ActionPerformed(evt);
@@ -149,6 +159,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugmeTacka.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/point.png"))); // NOI18N
+        dugmeTacka.setFocusable(false);
         dugmeTacka.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeTackaActionPerformed(evt);
@@ -156,6 +167,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugmeSabiranje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/plus.png"))); // NOI18N
+        dugmeSabiranje.setFocusable(false);
         dugmeSabiranje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeSabiranjeActionPerformed(evt);
@@ -163,6 +175,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugmeOduzimanje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/minus.png"))); // NOI18N
+        dugmeOduzimanje.setFocusable(false);
         dugmeOduzimanje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeOduzimanjeActionPerformed(evt);
@@ -170,6 +183,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugmeMnozenje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/multiple.png"))); // NOI18N
+        dugmeMnozenje.setFocusable(false);
         dugmeMnozenje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmeMnozenjeActionPerformed(evt);
@@ -177,6 +191,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugmePodeljeno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/divide.png"))); // NOI18N
+        dugmePodeljeno.setFocusable(false);
         dugmePodeljeno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugmePodeljenoActionPerformed(evt);
@@ -185,6 +200,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         CDugme.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         CDugme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/c.png"))); // NOI18N
+        CDugme.setFocusable(false);
         CDugme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CDugmeActionPerformed(evt);
@@ -195,13 +211,24 @@ public class CalculatorGUI extends javax.swing.JFrame {
         rezultat.setBackground(new java.awt.Color(244, 244, 244));
         rezultat.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         rezultat.setSelectionColor(new java.awt.Color(255, 0, 0));
+        rezultat.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                rezultatFocusGained(evt);
+            }
+        });
         rezultat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rezultatActionPerformed(evt);
             }
         });
+        rezultat.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                rezultatKeyPressed(evt);
+            }
+        });
 
         backspace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/backspace.png"))); // NOI18N
+        backspace.setFocusable(false);
         backspace.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backspaceActionPerformed(evt);
@@ -212,6 +239,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jednako.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jednako.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/equal.png"))); // NOI18N
         jednako.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jednako.setFocusable(false);
         jednako.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jednakoActionPerformed(evt);
@@ -219,6 +247,12 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugme0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/0.png"))); // NOI18N
+        dugme0.setFocusable(false);
+        dugme0.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                dugme0FocusLost(evt);
+            }
+        });
         dugme0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dugme0ActionPerformed(evt);
@@ -226,6 +260,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dugmeZnak.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clientcalculator/+-.png"))); // NOI18N
+        dugmeZnak.setFocusable(false);
         dugmeZnak.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 dugmeZnakItemStateChanged(evt);
@@ -243,8 +278,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(29, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(rezultat)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(dugme1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -271,20 +305,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(backspace, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dugme9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(dugmeSabiranje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(dugmeOduzimanje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(dugmePodeljeno, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(dugmeMnozenje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jednako, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(16, 16, 16)))
+                                    .addComponent(dugme9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(dugmeSabiranje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(dugmeOduzimanje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(dugmePodeljeno, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(dugmeMnozenje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jednako, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(16, 16, 16))))
+                    .addComponent(rezultat))
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
@@ -431,7 +466,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jednakoActionPerformed
 
     private void dugme0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dugme0ActionPerformed
-                rezultat.setText(rezultat.getText() + "0");
+        rezultat.setText(rezultat.getText() + "0");
     }//GEN-LAST:event_dugme0ActionPerformed
 
     private void dugmeZnakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dugmeZnakActionPerformed
@@ -439,20 +474,108 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_dugmeZnakActionPerformed
 
     private void dugmeZnakItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_dugmeZnakItemStateChanged
-        if(evt.getStateChange() == ItemEvent.SELECTED){
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
             rezultat.setText("-" + rezultat.getText());
-        }
-        else{
+        } else {
             rezultat.setText((rezultat.getText()).substring(1));
         }
     }//GEN-LAST:event_dugmeZnakItemStateChanged
-/**/
+
+    private void dugme0FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dugme0FocusLost
+        dugme0.setFocusable(false);
+    }//GEN-LAST:event_dugme0FocusLost
+
+    private void rezultatFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_rezultatFocusGained
+        rezultat.setFocusable(true);
+    }//GEN-LAST:event_rezultatFocusGained
+
+    private void rezultatKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rezultatKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_0 || evt.getKeyCode() == KeyEvent.VK_NUMPAD0) {
+            rezultat.setText(rezultat.getText() + "0");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_1 || evt.getKeyCode() == KeyEvent.VK_NUMPAD1) {
+            rezultat.setText(rezultat.getText() + "1");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_2 || evt.getKeyCode() == KeyEvent.VK_NUMPAD2) {
+            rezultat.setText(rezultat.getText() + "2");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_3 || evt.getKeyCode() == KeyEvent.VK_NUMPAD3) {
+            rezultat.setText(rezultat.getText() + "3");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_4 || evt.getKeyCode() == KeyEvent.VK_NUMPAD4) {
+            rezultat.setText(rezultat.getText() + "4");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_5 || evt.getKeyCode() == KeyEvent.VK_NUMPAD5) {
+            rezultat.setText(rezultat.getText() + "5");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_6 || evt.getKeyCode() == KeyEvent.VK_NUMPAD6) {
+            rezultat.setText(rezultat.getText() + "6");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_7 || evt.getKeyCode() == KeyEvent.VK_NUMPAD7) {
+            rezultat.setText(rezultat.getText() + "7");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_8 || evt.getKeyCode() == KeyEvent.VK_NUMPAD8) {
+            rezultat.setText(rezultat.getText() + "8");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_9 || evt.getKeyCode() == KeyEvent.VK_NUMPAD9) {
+            rezultat.setText(rezultat.getText() + "9");
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+            rezultat.setText(rezultat.getText().substring(0, rezultat.getText().length() - 1));
+            ukljuciDugmice();
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_DELETE) {
+            rezultat.setText("");
+            ukljuciDugmice();
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_DECIMAL) {
+            rezultat.setText(rezultat.getText() + ".");
+
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_ADD || evt.getKeyCode() == KeyEvent.VK_PLUS) {
+            rezultat.setText(rezultat.getText() + "+");
+            iskljuciDugmice();
+
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_MINUS || evt.getKeyCode() == KeyEvent.VK_SUBTRACT) {
+            rezultat.setText(rezultat.getText() + "-");
+            iskljuciDugmice();
+
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_MULTIPLY) {
+            rezultat.setText(rezultat.getText() + "*");
+            iskljuciDugmice();
+
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_DIVIDE) {
+            rezultat.setText(rezultat.getText() + "/");
+            iskljuciDugmice();
+
+        }
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            ukljuciDugmice();
+        String rezultatServeru = rezultat.getText();
+        CalculatorClient c = new CalculatorClient();
+
+        try {
+            String rezultatOdServera = c.izracunaj(rezultatServeru);
+
+            rezultat.setText(rezultatOdServera);
+        } catch (Exception ex) {
+            Logger.getLogger(CalculatorGUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        }
+        
+
+    }//GEN-LAST:event_rezultatKeyPressed
+    /**/
     public void ukljuciDugmice() {
         dugmeOduzimanje.setEnabled(true);
         dugmeSabiranje.setEnabled(true);
         dugmeMnozenje.setEnabled(true);
         dugmePodeljeno.setEnabled(true);
-        
+
     }
 
     public void iskljuciDugmice() {
@@ -460,12 +583,12 @@ public class CalculatorGUI extends javax.swing.JFrame {
         dugmeSabiranje.setEnabled(false);
         dugmeMnozenje.setEnabled(false);
         dugmePodeljeno.setEnabled(false);
-        
+
     }
 
     public static void main(String args[]) throws IOException {
         try {
-            
+
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
